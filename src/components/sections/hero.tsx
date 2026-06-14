@@ -48,6 +48,7 @@ export default function Hero() {
 					alt="hero-img"
 					width={300}
 					height={300}
+					priority
 					className="w-68 md:w-150 h-auto aspect-square"
 				/>
 			</div>

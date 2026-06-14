@@ -38,7 +38,7 @@ export default function Navbar() {
 						<li key={link.label}>
 							<Link
 								href={link.href}
-								className="hover:text-[#00C950] transition-colors"
+								className="hover:text-accent transition-colors"
 							>
 								{link.label}
 							</Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
 									<Link
 										href={link.href}
 										onClick={() => setIsOpen(false)}
-										className="block py-2 hover:text-[#00C950] transition-colors"
+										className="block py-2 hover:text-accent transition-colors"
 									>
 										{link.label}
 									</Link>

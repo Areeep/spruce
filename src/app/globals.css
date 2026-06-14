@@ -10,7 +10,7 @@ html {
 }
 
 @theme inline {
-	--color-accent: oklch(0.9081 0.2211 129.87);
+	--color-accent: oklch(0.7289 0.2119 147.82);
 	--font-poppins: var(--font-poppins);
 	--font-dm-sans: var(--font-dm-sans);
 }
