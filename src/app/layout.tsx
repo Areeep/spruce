@@ -5,11 +5,13 @@ import "./globals.css";
 const poppins = Poppins({
 	variable: "--font-poppins",
 	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
 });
 
 const dmSans = DM_Sans({
 	variable: "--font-dm-sans",
 	subsets: ["latin"],
+	weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
