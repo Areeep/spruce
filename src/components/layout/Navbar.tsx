@@ -1,18 +1,33 @@
+/**
+ * ============================================================================
+ * Component   : Navbar
+ * Layer       : Layout Component
+ *
+ * Description:
+ * Header tetap di bagian atas halaman berisi logo, navigasi desktop, dan
+ * tombol menu untuk layar kecil. Panel menu mobile dimuat lazy lewat
+ * next/dynamic agar tidak membebani bundle awal.
+ * ============================================================================
+ */
+
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { NAV_LINKS } from "@/constants/navigation";
 
-const NAV_LINKS = [
-	{ href: "#", label: "Home" },
-	{ href: "#", label: "About" },
-	{ href: "#", label: "Services" },
-	{ href: "#", label: "FAQ" },
-	{ href: "#", label: "Contacts" },
-];
+// * Lazy loading: kode menu mobile hanya diunduh saat menu dibuka pertama kali
+const MobileMenu = dynamic(() => import("./MobileMenu"));
 
+/**
+ * Menampilkan header situs dengan navigasi responsif.
+ * State `isOpen` mengatur buka-tutup menu mobile.
+ *
+ * @returns Elemen header navigasi.
+ */
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -57,23 +72,7 @@ export default function Navbar() {
 					/>
 				</button>
 
-				{isOpen && (
-					<div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden animate-in fade-in slide-in-from-top-5 duration-200">
-						<ul className="flex flex-col p-5 gap-4 font-medium text-slate-700">
-							{NAV_LINKS.map((link) => (
-								<li key={link.label}>
-									<Link
-										href={link.href}
-										onClick={() => setIsOpen(false)}
-										className="block py-2 hover:text-accent transition-colors"
-									>
-										{link.label}
-									</Link>
-								</li>
-							))}
-						</ul>
-					</div>
-				)}
+				{isOpen && <MobileMenu onNavigate={() => setIsOpen(false)} />}
 			</nav>
 		</header>
 	);

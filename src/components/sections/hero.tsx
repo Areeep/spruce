@@ -1,6 +1,23 @@
+/**
+ * ============================================================================
+ * Component   : Hero
+ * Layer       : Section Component
+ *
+ * Description:
+ * Bagian pembuka halaman: judul, deskripsi layanan, dua tombol aksi, statistik
+ * singkat, dan gambar utama. Gambar memakai `priority` karena berada di atas
+ * lipatan layar (LCP).
+ * ============================================================================
+ */
+
 import Link from "next/link";
 import Image from "next/image";
 
+/**
+ * Menampilkan section hero beranda Spruce.
+ *
+ * @returns Elemen section hero.
+ */
 export default function Hero() {
 	return (
 		<section className="h-dvh px-5 md:px-16 flex flex-col-reverse sm:flex-row items-center justify-center gap-2">
