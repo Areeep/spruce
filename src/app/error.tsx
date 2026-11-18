@@ -16,7 +16,7 @@ import { useEffect } from "react";
 /**
  * Properti komponen ErrorBoundary.
  */
-interface ErrorBoundaryProps {
+export interface ErrorBoundaryProps {
 	/** Galat yang tertangkap; `digest` adalah id galat sisi server bila ada. */
 	error: Error & { digest?: string };
 	/** Fungsi dari Next.js untuk mencoba merender ulang segmen. */

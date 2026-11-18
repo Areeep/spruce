@@ -1,0 +1,10 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"entryPoints": ["src"],
+	"entryPointStrategy": "expand",
+	"exclude": ["**/*.css"],
+	"out": "docs/api",
+	"name": "Spruce",
+	"readme": "README.md",
+	"tsconfig": "tsconfig.json"
+}

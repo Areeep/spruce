@@ -16,7 +16,7 @@ import { NAV_LINKS } from "@/constants/navigation";
 /**
  * Properti komponen MobileMenu.
  */
-interface MobileMenuProps {
+export interface MobileMenuProps {
 	/** Dipanggil saat salah satu tautan dipilih, biasanya untuk menutup menu. */
 	onNavigate: () => void;
 }

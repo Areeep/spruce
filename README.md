@@ -39,3 +39,11 @@ pnpm lint && pnpm build
 ```
 
 Terakhir diperbarui: Next.js 16.2.9 → 16.4.6, React 19.2.4 → 19.3.1.
+
+## Dokumentasi API
+
+Dokumentasi dihasilkan dari TSDoc dengan [TypeDoc](https://typedoc.org):
+
+```bash
+pnpm run docs     # hasil di docs/api (buka docs/api/index.html)
+```
